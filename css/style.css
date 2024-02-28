@@ -15,14 +15,14 @@ body{
 }
 .ctkm-wrapper{
     width: 100%;
-    max-width: 1200px;
     min-width: 500px;
     margin: 0 auto;
+    overflow: auto;
 }
 .ctkm-section{
-    max-width: 100%;
+    width: 1200px;
     min-width: none;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 .ctkm-section-title{
     text-align: center;
@@ -40,8 +40,8 @@ body{
 }
 .ctkm-products-nav ul li{
     float: left;
-    width: 20% ;
-    max-width: 241px;
+    width: 18% ;
+    max-width: 220px;
     min-width: 100px;
     list-style: none;
     margin: 0 15px 10px 0;
@@ -114,4 +114,18 @@ body{
 .ctkm-viewall-link a{
     color: white;
     text-decoration: none;
+}
+.ctkm-footer{
+    width: 100%;
+    background-color: #fbe6cf;
+}
+.ctkm-footer-content{
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    padding: 3px 0;
+    margin: 0 auto;
+    line-height: 20px;
 }
