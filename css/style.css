@@ -26,7 +26,7 @@ body{
 }
 .ctkm-section-title{
     text-align: center;
-    margin: 65px 0 30px 0;
+    margin: 65px 0 15px 0;
 }
 .ctkm-section-title img{
     max-width: 85%;
@@ -117,7 +117,7 @@ body{
 }
 .ctkm-footer{
     width: 100%;
-    background-color: #fbe6cf;
+    background-color: #ffefe0;
 }
 .ctkm-footer-content{
     max-width: 1200px;
@@ -128,4 +128,16 @@ body{
     padding: 3px 0;
     margin: 0 auto;
     line-height: 20px;
+}
+.ctkm-ads-banners{
+    max-width: 1200px;
+    width: 100%;
+    margin: 15px auto;
+    overflow: auto;
+}
+.ctkm-ads-banners img{
+    float: left;
+    width: 100%;
+    max-width: 590px;
+    margin-right: 10px;
 }
