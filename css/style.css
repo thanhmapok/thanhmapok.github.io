@@ -33,6 +33,8 @@ body{
 }
 .ctkm-products-wrapper{
     max-width: 1200px;
+    position: relative;
+    overflow: hidden;
 }
 .ctkm-products-nav{
    min-height: 60px;
@@ -68,9 +70,10 @@ body{
 }
 .ctkm-products-list{
     display: block;
-    position: relative;
-    top: 15px;
-    height: 550px;
+    margin-top: 12px;
+    height: 500px;
+    transition: all 0.75s ease;
+    margin-left: 0;
 }
 .ctkm-products-list ul{
     display: block;
@@ -78,6 +81,7 @@ body{
     position: absolute;
     transition: all 0.5s 0.15s linear;
     opacity: 0;
+    width: 4800px;
 }
 
 .ctkm-products-nav ul{
@@ -115,14 +119,17 @@ body{
     overflow: auto;
     color: white;
     position: relative;
-    top: 15px;
+    
 }
 a{
     text-decoration: none;
 }
-.ctkm-footer{
+.ctkm-footer, .ctkm-footer-info{
     width: 100%;
     background-color: #ffefe0;
+}
+.ctkm-footer-info{
+    background-color: white !important;
 }
 .ctkm-footer-content{
     max-width: 1200px;
@@ -145,4 +152,45 @@ a{
     width: 100%;
     max-width: 590px;
     margin-right: 10px;
+}
+.ctkm-hethong-ns{
+    text-align: left;
+    line-height: 30px;
+    color: #333;
+    margin: 15px 0;
+    font-size: 14px;
+}
+.ctkm-hethong-ns h2{
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+.ctkm-arrows{
+    position: absolute;
+    top: 280px;
+    z-index: 999;
+    opacity: 0.35;
+    background-position: center;
+    background-size: cover;
+}
+.ctkm-arrows:hover{
+    opacity: 0.75;
+}
+.ctkm-arrows:active{
+    width: 50px;
+    height: 50px;
+}
+.ctkm-arrow-left{
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background-image: url(../images/Asset\ 20.png);
+    left: 10px;
+    display: none;
+}
+.ctkm-arrow-right{
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background-image: url(../images/Asset\ 21.png);
+    right: 10px;
 }
