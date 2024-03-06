@@ -20,7 +20,7 @@ body{
     overflow: auto;
 }
 .ctkm-section{
-    width: 1200px;
+    max-width: 1200px;
     min-width: none;
     margin: 20px auto;
 }
@@ -151,7 +151,7 @@ a{
     float: left;
     width: 100%;
     max-width: 590px;
-    margin-right: 10px;
+    margin: 3px 10px 3px 0;
 }
 .ctkm-hethong-ns{
     text-align: left;
@@ -193,4 +193,16 @@ a{
     cursor: pointer;
     background-image: url(../images/Asset\ 21.png);
     right: 10px;
+}
+.ctkm-top-cate-banner{
+    width: 100%;
+    max-width: 1200px;
+    max-height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px auto 15px auto;
+}
+.ctkm-top-cate-banner img{
+    width: 100%;
+    max-width: 1200px;
 }

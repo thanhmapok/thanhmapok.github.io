@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đọc Sách Tháng 3 | Nhà Sách Phương Nam</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20240306">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
         //Khai báo Link View All
@@ -26,6 +26,7 @@
         var viewAllSachTreNhocmiko = "https://nhasachphuongnam.com/nhoc-miko.html";
         var viewAllSachTreBlackjack = "https://nhasachphuongnam.com/black-jack-vi.html";
         var viewAllSachTreKingdom = "https://nhasachphuongnam.com/kingdom.html";
+        var viewAllSachTreKindaichi = "https://nhasachphuongnam.com/tham-tu-kindaichi.html";
 
         var viewAllSachKhac50 = "https://nhasachphuongnam.com/giam-50-vi-16.html";
         var viewAllSachKhac40 = "https://nhasachphuongnam.com/giam-40-vi-17.html";
@@ -43,8 +44,10 @@
                 $(this).parents(".ctkm-products-wrapper").children(".ctkm-products-list").find("ul").addClass("ctkm-list-inactive");
                 $(this).parents(".ctkm-products-wrapper").children(".ctkm-products-list").find("ul").removeClass("ctkm-list-active");
                 $(this).parents(".ctkm-products-wrapper").children(".ctkm-products-list").find("ul." + id).addClass("ctkm-list-active");
-                $(this).parents(".ctkm-products-wrapper").children(".ctkm-products-list").css("margin-left", 0);
-                
+                $(this).parents(".ctkm-products-wrapper").children(".ctkm-products-list").css("margin-left", 0); // list quay về ban đầu
+                $(this).parents(".ctkm-products-wrapper").children(".ctkm-arrow-right").show();
+                $(this).parents(".ctkm-products-wrapper").children(".ctkm-arrow-left").hide();
+
                 // Gán Link View All
                 switch (id) {
                     //Sách Nổi Bật
@@ -100,6 +103,9 @@
                     case "sale-tre-kingdom":
                         $(this).parents(".ctkm-products-wrapper").children(".viewAllLink").attr("href", viewAllSachTreKingdom);
                         break;
+                    case "sale-tre-kindaichi":
+                        $(this).parents(".ctkm-products-wrapper").children(".viewAllLink").attr("href", viewAllSachTreKindaichi);
+                        break;
                     //////////////////////////
 
 
@@ -123,7 +129,7 @@
                 if (newPos > -3600 && newPos % 600 == 0) {
                     newPos -= 600;
                     $(this).parents().children(".ctkm-products-list").css("margin-left", newPos);
-                    if(newPos==-3600){
+                    if (newPos == -3600) {
                         $(this).hide();
                     }
                     $(this).parents(".ctkm-products-wrapper").children(".ctkm-arrow-left").show();
@@ -135,7 +141,7 @@
                 if (newPos < 0 && newPos % 600 == 0) {
                     newPos += 600;
                     $(this).parents().children(".ctkm-products-list").css("margin-left", newPos);
-                    if(newPos==0){
+                    if (newPos == 0) {
                         $(this).hide();
                     }
                     $(this).parents(".ctkm-products-wrapper").children(".ctkm-arrow-right").show();
@@ -168,7 +174,9 @@
     <!-- Sách Nổi bật -->
     <div class="ctkm-wrapper" style="background-color: #ffefe0;">
         <div class="ctkm-section">
-            <a href="https://nhasachphuongnam.com/sach-noi-bat.html" target="_blank"><div class="ctkm-section-title"><img src="images/Asset 16.png" width="510" alt=""></div></a>
+            <a href="https://nhasachphuongnam.com/sach-noi-bat.html" target="_blank">
+                <div class="ctkm-section-title"><img src="images/Asset 16.png?v=20240306" width="510" alt=""></div>
+            </a>
             <div class="ctkm-products-wrapper">
                 <div class="ctkm-arrow-left ctkm-arrows"></div>
                 <div class="ctkm-arrow-right ctkm-arrows"></div>
@@ -182,132 +190,121 @@
                     <ul class="ctkm-list-active sale-pnb">
                         <a href="https://nhasachphuongnam.com/noi-sao-cho-tre-chiu-hoc-o-nha-va-o-truong-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-1.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/duong-xua-may-trang-theo-got-chan-but-tai-ban-nam-2023-bia-mem.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-2.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/atomic-habits-thay-doi-ti-hon-hieu-qua-bat-ngo-tai-ban-nam-2024.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-3.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/that-lac-coi-nguoi-tai-ban-nam-2023-bia-mem.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-4.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-4.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/khong-gioi-han-kham-pha-hooponopono-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-5.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-5.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/2030-nhung-xu-huong-lon-se-dinh-hinh-the-gioi-tuong-lai-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-6.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-6.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tro-ve-khong-trai-nghiem-hooponopono-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-7.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-7.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/suc-manh-cua-su-tu-te-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-8.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-8.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/nu-sinh-tai-ban-nam-2023.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-9.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/nu-sinh-tai-ban-nam-2023.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/pnb-9.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/gian-tai-ban-nam-2023.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-10.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/gian-tai-ban-nam-2023.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/pnb-10.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/hay-cung-uoc-mo-huong-toi-tuong-lai-tot-dep-hon-cho-nhan-loai.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-11.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-11.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/nguoi-trong-rung.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-12.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/nguoi-trong-rung.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/pnb-12.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/noi-sao-cho-tre-chiu-nghe-va-nghe-sao-cho-tre-chiu-noi-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-13.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-13.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/khai-thac-suc-manh-tiem-thuc-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-14.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/pnb-14.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/manh-gom-vo.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-15.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/manh-gom-vo.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/pnb-15.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/tho-va-thien-tai-ban-nam-2023.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/pnb-16.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/tho-va-thien-tai-ban-nam-2023.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/pnb-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre">
                         <a href="https://nhasachphuongnam.com/chuyen-doi-xua.html" target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-1.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/nguyen-ly-thuong-nhat-366-suy-ngam-ve-quyen-luc-quyen-ru-lam-chu-chien-luoc-va-ban-chat-con-nguoi.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-2.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/canh-bac-ai-chatgpt-va-tuong-lai-loai-nguoi.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-3.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/doi-ngan-dung-ngu-dai-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-4.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-4.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chuyen-cuoi-co-nhan.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-5.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chuyen-cuoi-co-nhan.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-5.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chuyen-giai-buon.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-6.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chuyen-giai-buon.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-6.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chuyen-tau-16-gio-50-tu-paddington.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-7.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chuyen-tau-16-gio-50-tu-paddington.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-7.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/mot-ngay-cung-chef-cuoc-song-cua-nguoi-tao-ra-huong-vi.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-8.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-8.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/harry-potter-ky-thu-phu-thuy.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-9.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/harry-potter-ky-thu-phu-thuy.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-9.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/con-loc-quan-tri-ba-tru-cot-cua-van-hoa-doanh-nghiep.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-10.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-10.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/mua-he-khong-ten-bia-mem.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-11.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/mua-he-khong-ten-bia-mem.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-11.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/cho-toi-xin-mot-ve-di-tuoi-tho-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-12.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-12.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/dung-bao-gio-di-an-mot-minh-tai-ban-nam-2022.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-13.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-13.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/48-nguyen-tac-chu-chot-cua-quyen-luc-tai-ban-nam-2020.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-14.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-14.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tu-duy-phan-bien-de-khong-bi-thao-tung-tam-ly.html"
                             target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-15.jpg" alt="" width=""></li>
+                            <li><img src="images/sach-noi-bat/tre-15.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/troi-truyen-ngan-nguyen-ngoc-tu.html"
-                            target="_blank">
-                            <li><img src="images/sach-noi-bat/tre-16.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/troi-truyen-ngan-nguyen-ngoc-tu.html" target="_blank">
+                            <li><img src="images/sach-noi-bat/tre-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                 </div>
@@ -322,10 +319,12 @@
     <!-- Sách PNB -->
     <div class="ctkm-wrapper" style="background-color: #FBE6CF;">
         <div class="ctkm-section">
-            <a href="https://nhasachphuongnam.com/phuong-nam-book-vi.html" target="_blank"><div class="ctkm-section-title"><img src="images/Asset 15.png" width="510" alt=""></div></a>
+            <a href="https://nhasachphuongnam.com/phuong-nam-book-vi.html" target="_blank">
+                <div class="ctkm-section-title"><img src="images/Asset 15.png?v=20240306" width="510" alt=""></div>
+            </a>
             <div class="ctkm-products-wrapper">
-                <!-- <div class="ctkm-arrow-left ctkm-arrows"></div>
-                <div class="ctkm-arrow-right ctkm-arrows"></div> -->
+                <div class="ctkm-arrow-left ctkm-arrows"></div>
+                <div class="ctkm-arrow-right ctkm-arrows"></div>
                 <div class="ctkm-products-nav">
                     <ul>
                         <li class="ctkm-sale-actived" id="sale-pnb-50">Giảm 50%</li>
@@ -339,84 +338,324 @@
                     <ul class="sale-pnb-50 ctkm-list-active">
                         <a href="https://nhasachphuongnam.com/nhung-giot-muc-giai-sach-hay-2013-van-hoc-thieu-nhi.html"
                             target="_blank">
-                            <li><img src="images/pnb/50/pnb-50-1.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/50/pnb-50-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/khu-vui-choi-cua-anh-n.html" target="_blank">
-                            <li><img src="images/pnb/50/pnb-50-2.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/50/pnb-50-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/triet-ly-giao-duc.html" target="_blank">
-                            <li><img src="images/pnb/50/pnb-50-3.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/50/pnb-50-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tu-sach-tinh-hoa-van-hoc-nang-thang-tam-giai-sach-hay-2013-van-hoc.html"
                             target="_blank">
-                            <li><img src="images/pnb/50/pnb-50-4.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/50/pnb-50-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nguoi-xua-da-quen-ngay-xua.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/yeu-dai-dot-yeu-chi-danh-cho-nhung-ke-mong-mo.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhat-ky-tam-linh-cua-co-be-9-tuoi.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/troi-van-con-xanh-em-van-con-anh.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/doi-khi.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/cong-ty-cung-cap-yeu-tinh.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thuc-day-anh-van-la-mo.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hay-tim-toi-giua-canh-dong-vi.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-ky-nghe-si-kim-cuong-song-cho-nguoi-song-cho-minh-bia-mem.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chet-khong-so-hai.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/song-of-myself-bai-hat-chinh-toi-bia-mem.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/sac-mau-co-tich-viet-nam-sach-to-mau-danh-cho-nguoi-lon.html"
+                            target="_blank">
+                            <li><img src="images/pnb/50/pnb-50-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-pnb-40">
                         <a href="https://nhasachphuongnam.com/quoc-gia-thang-tram-ly-giai-van-menh-cua-cac-nen-kinh-te.html"
                             target="_blank">
-                            <li><img src="images/pnb/40/pnb-40-1.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/40/pnb-40-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/nhung-mua-gio-rat.html" target="_blank">
-                            <li><img src="images/pnb/40/pnb-40-2.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/40/pnb-40-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tua-lung-vao-noi-nho.html" target="_blank">
-                            <li><img src="images/pnb/40/pnb-40-3.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/40/pnb-40-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/su-that-dat-ten-toi.html" target="_blank">
-                            <li><img src="images/pnb/40/pnb-40-4.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/40/pnb-40-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/mua-troi-tren-quang-ganh.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/bo-sach-lac-giua-nhan-gian-tren-duong-rong-ruoi.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/em-dung-chet-duoc-khong.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tieng-chim-nao-thu-thi-duoi-mai-hien.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/dao-cua-vat-ly-tai-ban-nam-2018.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhung-nu-hon-tam-biet.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/mephy-mephy-mephy-bia-mem.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhung-con-chuot-thoi-tho-au.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/100-nam-phi-truong-tan-son-nhat.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/phut-89-tu-truyen-le-cong-vinh.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoang-sa-truong-sa-trong-thu-tich-co.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhung-vong-am-nam-ngu.html"
+                            target="_blank">
+                            <li><img src="images/pnb/40/pnb-40-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-pnb-30">
                         <a href="https://nhasachphuongnam.com/hack-toc-do-hoan-thanh-cong-viec-chien-luoc-thich-nghi-va-but-pha-noi-cong-so.html"
                             target="_blank">
-                            <li><img src="images/pnb/30/pnb-30-1.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/30/pnb-30-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/de-che-hai-ly-khuc-trang-ca-ve-nhung-ky-su-kien-tao-dong-lay.html"
                             target="_blank">
-                            <li><img src="images/pnb/30/pnb-30-2.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/30/pnb-30-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/me-frisby-va-hoi-chuot-nimh-sieu-dang.html"
                             target="_blank">
-                            <li><img src="images/pnb/30/pnb-30-3.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/30/pnb-30-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/10-buoc-de-co-cuoc-song-tron-ven.html" target="_blank">
-                            <li><img src="images/pnb/30/pnb-30-4.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/30/pnb-30-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/voi-ngay-nhu-la-thang-nhu-may.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thien-hanh-yeu-chi-tai-ban-nam-2021.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tam-tu-cua-bach-tuoc-lan-sau-vao-y-thuc-cua-mot-giong-loai-xa-la.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chim-choc-chua-bao-gio-ngoc-giai-ma-bo-nao-thien-tai-cua-loai-chim.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/neo-ve-cua-y-tai-ban-nam-2021.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/trai-tim-mat-troi-vi.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tieng-viet-van-viet-nguoi-viet-tai-ban-nam-2021.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/dao-cua-vat-ly-tai-ban-nam-2021.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/combo-tommy-ca-sau-nho-bo-5-cuon.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tren-con-duong-to-lua-nam-a.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/vi-thuong.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tuy-but-hoi-ky-giai-thoai-tren-bao-xuan-sai-gon-xua-tap-2.html"
+                            target="_blank">
+                            <li><img src="images/pnb/30/pnb-30-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-pnb-20">
                         <a href="https://nhasachphuongnam.com/nien-lich-mien-gio-cat-tai-ban-nam-2022.html"
                             target="_blank">
-                            <li><img src="images/pnb/20/pnb-20-1.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/20/pnb-20-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/noi-sao-cho-tre-chiu-nghe-va-nghe-sao-cho-tre-chiu-noi-tai-ban-nam-2022.html"
                             target="_blank">
-                            <li><img src="images/pnb/20/pnb-20-2.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/20/pnb-20-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/thu-hut-thien-cam-tao-dung-long-tin-tai-ban-nam-2022.html"
                             target="_blank">
-                            <li><img src="images/pnb/20/pnb-20-3.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/20/pnb-20-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/duong-20-quyet-thang-lich-su-dia-danh-su-tich-va-tri-an.html"
                             target="_blank">
-                            <li><img src="images/pnb/20/pnb-20-4.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/20/pnb-20-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thien-tap-cho-nguoi-ban-ron-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/khoa-hoc-ky-nang-cho-thoi-dai-moi-lam-chu-viec-tu-hoc-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hay-tim-toi-giua-canh-dong-tai-ban-nam-2023-bia-cung.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/linh-dinh-tinh-phu-sa.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/voi-ngay-nhu-la-thang-nhu-may-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/de-tro-thanh-nha-bien-kich-phim-truyen-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/giai-quyet-xung-dot-trong-cuoc-song-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/bien-cuoc-doi-ngan-ngui-tro-nen-tuyet-voi-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/10-buoc-de-co-cuoc-song-tron-ven-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thanh-pho-nhung-luc-dia-bay.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/luc-luong-manh-ho.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chua-lanh-bang-tam-thuc-tai-ban-nam-2022.html"
+                            target="_blank">
+                            <li><img src="images/pnb/20/pnb-20-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-pnb-10">
                         <a href="https://nhasachphuongnam.com/biem-hoa-tren-bao-chi-sai-gon-truoc-1975.html"
                             target="_blank">
-                            <li><img src="images/pnb/10/pnb-10-1.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/10/pnb-10-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/khat-khao-cay-co.html" target="_blank">
-                            <li><img src="images/pnb/10/pnb-10-2.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/10/pnb-10-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/hieu-ung-dien-ap-tu-y-tuong-hay-den-tac-dong-lan-toa-trong-ky-nguyen-du-lieu-so.html"
                             target="_blank">
-                            <li><img src="images/pnb/10/pnb-10-3.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/10/pnb-10-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/cai-tai-va-cuoc-phieu-luu-ky-thu-vi-tai-ban-2024.html"
                             target="_blank">
-                            <li><img src="images/pnb/10/pnb-10-4.jpg" alt="" width=""></li>
+                            <li><img src="images/pnb/10/pnb-10-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thien-tap-cho-nguoi-ban-ron-tai-ban-nam-2024.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhat-tung-thien-mon-tai-ban-nam-2024.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/cong-chua-ao-den-va-ngay-hoi-cong-chua-anh-hung-tap-5.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/day-con-phat-trien-toan-nao-bo-tai-ban-nam-2024.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/atomic-habits-thay-doi-ti-hon-hieu-qua-bat-ngo-tai-ban-nam-2024.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhat-tung-thien-mon-giang-giai-cong-phu-no-doa-sen-ngan-canh-tap-2-cong-phu-ngay-thu-ba.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/sights-of-a-city-saigon-cholon-paintings-and-sketches.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nguoi-dep-ngu-me-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/bien-nien-su-ve-khung-long-tu-tien-hoa-toi-diet-vong.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/thuong-yeu-theo-phuong-phap-but-day-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tri-ky-cua-but-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/khan-gia-hoc.html"
+                            target="_blank">
+                            <li><img src="images/pnb/10/pnb-10-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                 </div>
@@ -431,10 +670,12 @@
     <!-- Sách NXB Trẻ -->
     <div class="ctkm-wrapper" style="background-color: #ffefe0;">
         <div class="ctkm-section">
-            <a href="https://nhasachphuongnam.com/nxb-tre-vi-4.html" target="_blank"><div class="ctkm-section-title"><img src="images/Asset 8.png" width="510" alt=""></div></a>
+            <a href="https://nhasachphuongnam.com/nxb-tre-vi-4.html" target="_blank">
+                <div class="ctkm-section-title"><img src="images/Asset 8.png?v=20240306" width="510" alt=""></div>
+            </a>
             <div class="ctkm-products-wrapper">
-                <!-- <div class="ctkm-arrow-left ctkm-arrows"></div>
-                <div class="ctkm-arrow-right ctkm-arrows"></div> -->
+                <div class="ctkm-arrow-left ctkm-arrows"></div>
+                <div class="ctkm-arrow-right ctkm-arrows"></div>
                 <div class="ctkm-products-nav">
                     <ul>
                         <li class="ctkm-sale-actived" id="sale-tre-30">Giảm 30%</li>
@@ -446,48 +687,192 @@
                     <ul class="sale-tre-30 ctkm-list-active">
                         <a href="https://nhasachphuongnam.com/10-bai-hoc-cho-the-gioi-hau-dai-dich.html"
                             target="_blank">
-                            <li><img src="images/tre/30/tre-30-1.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/30/tre-30-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/sai-gon-chon-nho-nhung-dieu-thuong.html" target="_blank">
-                            <li><img src="images/tre/30/tre-30-2.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/30/tre-30-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/hinh-ve-thong-minh-giai-quyet-van-de-phuc-tap-bang-hinh-anh-don-gian-vi.html"
                             target="_blank">
-                            <li><img src="images/tre/30/tre-30-3.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/30/tre-30-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/pham-chat-lanh-dao-nhi-su-khiem-ton.html" target="_blank">
-                            <li><img src="images/tre/30/tre-30-4.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/30/tre-30-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/trong-tham-sau-cua-bi-an-tap-2-bi-an-cac-nen-van-hoa-trong-lich-su-loai-nguoi-vi.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/trong-tham-sau-cua-bi-an-tap-1-cac-hien-tuong-sieu-linh-va-ky-bi-cua-nhan-loai-vi.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/khoa-hoc-kham-pha-mat-ma-tu-co-dien-den-luong-tu-tai-ban-nam-2019.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/bo-sach-tu-hoc-va-xu-the-theo-tinh-than-dao-hoc-dong-phuong-bo-2-cuon.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/khoa-hoc-kham-pha-cai-vo-han-trong-long-ban-tay-tu-big-bang-den-giac-ngo-tai-ban-nam-2019.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhung-cau-chuyen-ve-long-trac-an.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hen-voi-than-chet-vi.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/500-cau-chuyen-dao-duc-tinh-thay-tro.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/500-cau-chuyen-dao-duc-tinh-mau-tu-vi-2.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/500-cau-chuyen-dao-duc-tinh-chi-em.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hang-luat.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hong-nhan-da-truan.html"
+                            target="_blank">
+                            <li><img src="images/tre/30/tre-30-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre-20">
                         <a href="https://nhasachphuongnam.com/ba-ngoai-toi-gui-loi-xin-loi-tai-ban-nam-2023.html"
                             target="_blank">
-                            <li><img src="images/tre/20/tre-20-1.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/20/tre-20-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/oxford-thuong-yeu-tai-ban-nam-2023.html" target="_blank">
-                            <li><img src="images/tre/20/tre-20-2.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/20/tre-20-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/vi-dai-do-lua-chon-tai-ban-nam-2023.html" target="_blank">
-                            <li><img src="images/tre/20/tre-20-3.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/20/tre-20-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/bi-kich-ba-hoi.html" target="_blank">
-                            <li><img src="images/tre/20/tre-20-4.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/20/tre-20-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/viet-linh-tuyen-tap-keo-tro-bay-mat.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/anh-em-phi-hanh-gia-tap-42.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/3x3-eyes-co-be-ba-mat-tap-10.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-con-trai-tap-4.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-con-trai-tap-3.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/be-hoc-le-giao-tap-36-bubu-di-nghi-mat-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/skip-beat-tap-49.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-con-trai-tap-2.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/2500-tu-vung-danh-cho-ky-thi-nang-luc-nhat-ngu-n2-vi.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-con-trai-tap-1.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nguyen-ly-80-20-bi-quyet-lam-it-duoc-nhieu-tai-ban-nam-2023.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/messi-vs.-ronaldo-su-doi-dau-cua-hai-cau-thu-vi-dai-va-ky-nguyen-tai-tao-bong-da-the-gioi.html"
+                            target="_blank">
+                            <li><img src="images/tre/20/tre-20-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre-10">
                         <a href="https://nhasachphuongnam.com/xin-chao-ai-hoc-va-choi-cung-tri-tue-nhan-tao.html"
                             target="_blank">
-                            <li><img src="images/tre/10/tre-10-1.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/10/tre-10-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/chuyen-cuoi-co-nhan.html" target="_blank">
-                            <li><img src="images/tre/10/tre-10-2.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/10/tre-10-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/chuyen-tau-16-gio-50-tu-paddington.html" target="_blank">
-                            <li><img src="images/tre/10/tre-10-3.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/10/tre-10-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/mot-ngay-cung-chef-cuoc-song-cua-nguoi-tao-ra-huong-vi.html"
                             target="_blank">
-                            <li><img src="images/tre/10/tre-10-4.jpg" alt="" width=""></li>
+                            <li><img src="images/tre/10/tre-10-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/myanmar-truyen-khong-phai-truyen.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/banana-fish-tap-15.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/hoi-con-trai-tap-5.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nu-hon-tinh-nghich-tap-5.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/soul-eater-tap-5.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-66.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/ho-tro-thanh-nhan-vat-cua-toi-tai-ban-nam-2024.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/them-cu-da-xanh-reu.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chim-en-bay-ve.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tang-von-tu-them-kien-thuc-50-tu-ve-dong-vat.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tang-von-tu-them-kien-thuc-50-tu-ve-thuc-vat.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tang-von-tu-them-kien-thuc-50-tu-ve-cac-loai-chim.html"
+                            target="_blank">
+                            <li><img src="images/tre/10/tre-10-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                 </div>
@@ -503,89 +888,274 @@
     <!-- Manga - Truyện Tranh -->
     <div class="ctkm-wrapper" style="background-color: #FBE6CF;">
         <div class="ctkm-section">
-            <a href="https://nhasachphuongnam.com/manga-vi-2.html" target="_blank"><div class="ctkm-section-title"><img src="images/Asset 17.png" width="510" alt=""></div></a>
+            <a href="https://nhasachphuongnam.com/manga-vi-2.html" target="_blank">
+                <div class="ctkm-section-title"><img src="images/Asset 17.png?v=20240306" width="510" alt=""></div>
+            </a>
+            <div class="ctkm-top-cate-banner"><a
+                href="https://nhasachphuongnam.com/combo-attack-on-titan-tap-1-2-3.html" target="_blank"><img
+                    src="images/banner-aot.jpg?v=20240306" alt="" /></a></div>
             <div class="ctkm-products-wrapper">
-                <!-- <div class="ctkm-arrow-left ctkm-arrows"></div>
-                <div class="ctkm-arrow-right ctkm-arrows"></div> -->
+                <div class="ctkm-arrow-left ctkm-arrows"></div>
+                <div class="ctkm-arrow-right ctkm-arrows"></div>
                 <div class="ctkm-products-nav">
                     <ul>
                         <li class="ctkm-sale-actived" id="sale-tre-chainsawman">Chainsaw Man</li>
                         <li id="sale-tre-nhocmiko">Nhóc Miko</li>
                         <li id="sale-tre-blackjack">Black Jack</li>
                         <li id="sale-tre-kingdom">Kingdom</li>
+                        <li id="sale-tre-kindaichi">Thám Tử Kindaichi</li>
                     </ul>
                 </div>
                 <div class="ctkm-products-list">
                     <ul class="sale-tre-chainsawman ctkm-list-active">
-                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-11.html"
-                            target="_blank">
-                            <li><img src="images/manga/chainsaw-man/chainsaw-man-1.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-11.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-10.html"
-                            target="_blank">
-                            <li><img src="images/manga/chainsaw-man/chainsaw-man-2.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-10.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-9.html"
-                            target="_blank">
-                            <li><img src="images/manga/chainsaw-man/chainsaw-man-3.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-9.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-8.html"
-                            target="_blank">
-                            <li><img src="images/manga/chainsaw-man/chainsaw-man-4.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-8.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-7.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-6.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-3.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-1.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-11.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-1.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-10.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-2.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-9.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-3.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-8.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-7.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-6.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-3.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/chainsaw-man-tap-1.html" target="_blank">
+                            <li><img src="images/manga/chainsaw-man/chainsaw-man-8.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre-nhocmiko">
                         <a href="https://nhasachphuongnam.com/boxset-nhoc-miko-co-be-nhi-nhanh-bo-36-tap.html"
                             target="_blank">
-                            <li><img src="images/manga/nhoc-miko/nhoc-miko-1.jpg" alt="" width=""></li>
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-37.html"
-                            target="_blank">
-                            <li><img src="images/manga/nhoc-miko/nhoc-miko-2.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-37.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-7-vi.html"
-                            target="_blank">
-                            <li><img src="images/manga/nhoc-miko/nhoc-miko-3.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-7-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-21-vi.html"
-                            target="_blank">
-                            <li><img src="images/manga/nhoc-miko/nhoc-miko-4.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-21-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/combo-nhoc-miko-bo-4-tap.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-11-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-13-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-10-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-18-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-17-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-14-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-12-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-8-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-5-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-16-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/nhoc-miko-co-be-nhi-nhanh-tap-6-vi.html" target="_blank">
+                            <li><img src="images/manga/nhoc-miko/nhoc-miko-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre-blackjack">
-                        <a href="https://nhasachphuongnam.com/black-jack-tap-18.html"
-                            target="_blank">
-                            <li><img src="images/manga/black-jack/black-jack-1.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-18.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/black-jack-tap-16.html"
-                            target="_blank">
-                            <li><img src="images/manga/black-jack/black-jack-2.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-16.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/black-jack-tap-14.html"
-                            target="_blank">
-                            <li><img src="images/manga/black-jack/black-jack-3.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-14.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/black-jack-tap-13.html"
-                            target="_blank">
-                            <li><img src="images/manga/black-jack/black-jack-4.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-13.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-12.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-11.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-10.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-7.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-6.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-5.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-16-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-15-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-14-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-13-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-12-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/black-jack-tap-10-bia-cung.html" target="_blank">
+                            <li><img src="images/manga/black-jack/black-jack-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-tre-kingdom">
-                        <a href="https://nhasachphuongnam.com/kingdom-tap-62.html"
-                            target="_blank">
-                            <li><img src="images/manga/kingdom/kingdom-1.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-62.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/kingdom-tap-61.html"
-                            target="_blank">
-                            <li><img src="images/manga/kingdom/kingdom-2.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-61.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/kingdom-tap-65.html"
-                            target="_blank">
-                            <li><img src="images/manga/kingdom/kingdom-3.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-65.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
-                        <a href="https://nhasachphuongnam.com/kingdom-tap-64.html"
-                            target="_blank">
-                            <li><img src="images/manga/kingdom/kingdom-4.jpg" alt="" width=""></li>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-64.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-66.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-63.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-60.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-59.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-58.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-57.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-56.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-55.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-54.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-52.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-51.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/kingdom-tap-49.html" target="_blank">
+                            <li><img src="images/manga/kingdom/kingdom-16.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                    </ul>
+                    <ul class="sale-tre-kindaichi">
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-5-an-mang-trong-phong-huyet-luu.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-1.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-4-loi-thach-thuc-tu-sieu-trom-hao-hoa.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-2.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-3-sat-nhan-trong-quan-an.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-3.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-2-an-mang-trong-me-cung-guong.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-1-am-muu-sat-nhan-duoi-cai-lanh-am-15-do.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/ngoai-truyen-tham-tu-kindaichi-thieu-nien-takato-va-vu-an-ky-bi.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-phan-dac-biet-thanh-tra-akechi-va-chuyen-an-hao-nhoang.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-phan-dac-biet-thieu-nien-akechi-va-chuyen-an-ngoan-muc.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-5-an-mang-trong-phong-huyet-luu.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-1.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-4-loi-thach-thuc-tu-sieu-trom-hao-hoa.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-2.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-3-sat-nhan-trong-quan-an.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-3.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-2-an-mang-trong-me-cung-guong.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-short-file-1-am-muu-sat-nhan-duoi-cai-lanh-am-15-do.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/ngoai-truyen-tham-tu-kindaichi-thieu-nien-takato-va-vu-an-ky-bi.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-phan-dac-biet-thanh-tra-akechi-va-chuyen-an-hao-nhoang.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tham-tu-kindaichi-phan-dac-biet-thieu-nien-akechi-va-chuyen-an-ngoan-muc.html" target="_blank">
+                            <li><img src="images/manga/kindaichi/kindaichi-8.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                 </div>
@@ -600,10 +1170,12 @@
     <!-- Sách NXB Khác -->
     <div class="ctkm-wrapper" style="background-color: #ffefe0;">
         <div class="ctkm-section">
-            <a href="https://nhasachphuongnam.com/nxb-khac.html" target="_blank"><div class="ctkm-section-title"><img src="images/Asset 9.png" width="510" alt=""></div></a>
+            <a href="https://nhasachphuongnam.com/nxb-khac.html" target="_blank">
+                <div class="ctkm-section-title"><img src="images/Asset 9.png?v=20240306" width="510" alt=""></div>
+            </a>
             <div class="ctkm-products-wrapper">
-                <!-- <div class="ctkm-arrow-left ctkm-arrows"></div>
-                <div class="ctkm-arrow-right ctkm-arrows"></div> -->
+                <div class="ctkm-arrow-left ctkm-arrows"></div>
+                <div class="ctkm-arrow-right ctkm-arrows"></div>
                 <div class="ctkm-products-nav">
                     <ul>
                         <li class="ctkm-sale-actived" id="sale-khac-50">Giảm 50%</li>
@@ -614,36 +1186,84 @@
                     <ul class="sale-khac-50 ctkm-list-active">
                         <a href="https://nhasachphuongnam.com/the-council-of-europes-common-european-framework-the-vocabulary-files-a1-level.html"
                             target="_blank">
-                            <li><img src="images/khac/50/khac-50-1.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/50/khac-50-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/mua-he-ruc-ro-cua-chung-ta.html" target="_blank">
-                            <li><img src="images/khac/50/khac-50-2.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/50/khac-50-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/collins-work-on-your-grammar-pre-intermediate-a2.html"
                             target="_blank">
-                            <li><img src="images/khac/50/khac-50-3.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/50/khac-50-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/mo-phong-de-thi-hsk-phien-ban-moi-cap-do-5.html"
                             target="_blank">
-                            <li><img src="images/khac/50/khac-50-4.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/50/khac-50-4.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tai-lieu-luyen-thi-hsk-phien-ban-moi-cap-do-5.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-5.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/english-at-a-glance-5-tu-vung-tieng-anh-can-ban.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-6.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/english-at-a-glance-3-khai-quat-ve-cach-phat-am-tieng-anh.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-7.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/english-at-a-glance-2-nhung-mau-cau-tieng-anh-thong-dung-trong-giao-tiep.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-8.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tai-lieu-luyen-thi-hsk-phien-ban-moi-cap-do-4.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-9.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tai-lieu-luyen-thi-hsk-phien-ban-moi-cap-do-1.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-10.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tai-lieu-luyen-thi-hsk-phien-ban-moi-cap-do-2.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-11.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/toefl-primary-step-1-book-3.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-12.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/toefl-primary-step-1-book-2.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-13.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/lessons-for-ielts-writing-tai-ban-nam-2021.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-14.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/build-up-to-ielts-5.5-6.0-a-step-by-step-course.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-15.jpg?v=20240306" alt="" width=""></li>
+                        </a>
+                        <a href="https://nhasachphuongnam.com/tai-lieu-luyen-thi-tong-hop-vstep-bac-3-b1.html"
+                            target="_blank">
+                            <li><img src="images/khac/50/khac-50-16.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                     <ul class="sale-khac-40">
                         <a href="https://nhasachphuongnam.com/collins-cobuild-key-words-for-ielts-book-1-starter.html"
                             target="_blank">
-                            <li><img src="images/khac/40/khac-40-1.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/40/khac-40-1.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/cambridge-english-qualifications-a2-flyers-three-practice-tests-bo-2-cuon-kem-cd.html"
                             target="_blank">
-                            <li><img src="images/khac/40/khac-40-2.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/40/khac-40-2.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tieng-anh-danh-cho-hoc-sinh-trung-hoc-co-so-tap-2.html"
                             target="_blank">
-                            <li><img src="images/khac/40/khac-40-3.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/40/khac-40-3.jpg?v=20240306" alt="" width=""></li>
                         </a>
                         <a href="https://nhasachphuongnam.com/tieng-anh-danh-cho-hoc-sinh-trung-hoc-co-so-tap-3.html"
                             target="_blank">
-                            <li><img src="images/khac/40/khac-40-4.jpg" alt="" width=""></li>
+                            <li><img src="images/khac/40/khac-40-4.jpg?v=20240306" alt="" width=""></li>
                         </a>
                     </ul>
                 </div>
@@ -657,8 +1277,8 @@
 
     <div class="ctkm-ads-banners">
         <a href="https://bookish.vn/nha-sach-phuong-nam-ra-mat-nen-tang-so-tich-diem-komo-va-ung-dung-sach-noi-ban-quyen-komo-audio/"
-            target="_blank"><img src="images/left-banner.jpg" alt="" /></a>
-        <img src="images/right-banner.jpg" alt="" />
+            target="_blank"><img src="images/left-banner.jpg?v=20240306" alt="" /></a>
+        <img src="images/right-banner.jpg?v=20240306" alt="" />
     </div>
 
     <div class="ctkm-footer">
