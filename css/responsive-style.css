@@ -12,9 +12,9 @@
     }
 
     .ctkm-products-nav ul li {
-        width: 25% !important;
+        width: 10% !important;
         font-size: 0.7em !important;
-        padding: 10px 8px !important;
+        padding: 10px 0px !important;
         font-weight: normal !important;
         margin: 0 10px 8px 0 !important;
     }
@@ -83,7 +83,7 @@
     }
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (max-width: 1200px) {
 
     /* For mobile phones: */
     .ctkm-ads-banners img {
