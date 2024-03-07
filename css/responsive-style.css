@@ -1,59 +1,136 @@
 @media only screen and (max-width: 768px) {
+
     /* For mobile phones: */
+    .ctkm-main-banner {
+        width: 100% !important;
+        height: 0 !important;
+        padding-top: 92.75% !important;
+        /* (img-height / img-width * container-width) */
+        /* (853 / 1280 * 100) */
+
+        background-image: url(../images/top-banner-m.jpg) !important;
+    }
+
     .ctkm-products-nav ul li {
-      width: 25%;
-      font-size: 0.7em;
-      padding: 10px 8px;
-      font-weight: normal;
-      margin: 0 10px 8px 0;
+        width: 25% !important;
+        font-size: 0.7em !important;
+        padding: 10px 8px !important;
+        font-weight: normal !important;
+        margin: 0 10px 8px 0 !important;
     }
-    .ctkm-section-title{
-        margin: 25px 0 0 0;
+
+    .ctkm-section-title {
+        margin: 25px 0 0 0 !important;
     }
+
     .ctkm-section-title img {
-        max-width: 70%;
+        max-width: 70% !important;
+    }
+
+    .ctkm-products-list {
+        height: 250px !important;
+    }
+
+    .ctkm-products-nav {
+        overflow: auto !important;
+    }
+
+    .ctkm-viewall-link {
+        padding: 12px 15px !important;
+        width: 50% !important;
+    }
+
+    .ctkm-top-cate-banner {
+        border-radius: 0px !important;
+        margin: 10px auto 0 auto !important;
+    }
+
+    .ctkm-ads-banners img {
+        width: 94% !important;
+        margin: 5px 3% 5px 3% !important;
+        border-radius: 5px !important;
+    }
+
+    .ctkm-footer-content {
+        width: 90% !important;
+        padding: 1px 0 !important;
+    }
+
+    .ctkm-hethong-ns h2 {
+        font-size: 1.25em !important;
+    }
+
+    .ctkm-hethong-ns h1 {
+        font-size: 1.5em !important;
+    }
+
+    .ctkm-hethong-ns {
+        line-height: 1.85em !important;
+    }
+
+    .ctkm-products-list ul {
+        width: 2304px !important;
+    }
+
+    .ctkm-products-list ul li {
+        width: 6.16% !important;
+    }
+    .ctkm-top-cate-banner {
+        background-image: url(../images/Banner-Pre-Order-Attack-on-Titan-for-MS-m.jpg) !important;
+        padding-top: 70.6% !important;
+        border-radius: 5px !important;
+        width: 94% !important;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+
+    /* For mobile phones: */
+    .ctkm-ads-banners img {
+        width: 49%;
+        float: left;
+        margin: 3px 0.4% 3px 0.4%;        
+    }
+    .ctkm-top-cate-banner {
+        width: 94%;
+        margin: 10px auto 0 auto;
+        padding-top: 23.5%
+    }
+    .ctkm-footer-content {
+        width: 95%;
+        padding: 1px 0;
+    }
+    .ctkm-products-list ul {
+        width: 3216px;
+    }
+
+    .ctkm-products-list ul li {
+        width: 6.188%;
     }
     .ctkm-products-list {
         margin-top: -10px;
         position: relative;
         overflow: scroll;
-        height: 250px;
-    }.ctkm-products-nav {
+        height: 340px;
+    }
+    .ctkm-products-nav {
         overflow: auto;
-    }
-    .ctkm-viewall-link {
-        padding: 12px 15px;
-        width: 50%;
-    }
-    .ctkm-top-cate-banner {
-        border-radius: 0px;
-        margin: 10px auto 0 auto;
-    }
-    .ctkm-ads-banners img {
-        width: 94%;
-        margin: 5px 3% 5px 3%;
-        border-radius: 5px;
-    }
-    .ctkm-footer-content {
-        width: 90%;
-        padding: 1px 0;
-    }
-    .ctkm-hethong-ns h2 {
-        font-size: 1.25em;
-    }
-    .ctkm-hethong-ns h1 {
-        font-size: 1.5em;
-    }
-    .ctkm-hethong-ns {
-        line-height: 1.85em;
-    }
-    .ctkm-products-list ul{
-        width: 2304px;
-    }
-    .ctkm-products-list ul li {
-        width: 6.16%;
     }
     .ctkm-arrows {
         display: none !important;
     }
-  }
+    .ctkm-section-title {
+        margin: 25px 0 0 0;
+    }
+
+    .ctkm-section-title img {
+        max-width: 40%;
+    }
+    .ctkm-products-nav ul li {
+        width: 15%;
+        font-size: 0.85em;
+        padding: 13px 0px;
+        font-weight: normal;
+        margin: 0 10px 8px 0;
+    }
+}
