@@ -167,12 +167,18 @@ a{
     position: absolute;
     top: 280px;
     z-index: 999;
-    opacity: 0.35;
+    opacity: 0.75;
     background-position: center;
     background-size: cover;
 }
 .ctkm-arrows:hover{
-    opacity: 0.75;
+    opacity: 0.9;
+}
+.ctkm-arrow-left:hover{
+    background-image: url(../images/Asset\ 22.png);
+}
+.ctkm-arrow-right:hover{
+    background-image: url(../images/Asset\ 23.png);
 }
 .ctkm-arrows:active{
     width: 50px;
