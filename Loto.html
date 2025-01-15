@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -130,8 +130,8 @@
 	$(document).ready(function () {
 		var array_color = ["#E0D732","#32B2E0","#DCE032","#AAA","#32E0DA"];
 		var color_selected = array_color[Math.floor(Math.random() * array_color.length)];
-	    var number = prompt("Chơi bao nhiêu tờ", "2");
-	    if (number == null) {
+	    var number = prompt("Nhập số tờ muốn chơi, 1 hoặc 2 thôi!!!", "2");
+	    if (number == null || (number != 1 && number != 2)) {
 	        number = 2;
 	    }
 	    if (number == 1) {
@@ -173,6 +173,7 @@
 		        if (ind > -1) {
 		            array_doc.splice(ind, 1);
 		            $("#number_current").html(x);
+                $("#call_girl").hide();
 		            $("#number_recent").append(x + " <br/> ");
 		        }
 		    }
@@ -187,9 +188,9 @@
 		        }
 		    });
 		    if (hasvalue == 0)
-		        alert('Đã KINH');
+		        alert('Đã c.ó KINH');
             else
-		        alert('Chưa KINH');
+		        alert('KINH đâu mà KINH, chơi tiếp đê');
 		});
 	});
 </script>
@@ -202,10 +203,35 @@
 <div id="check_box">
     <input type="text" class="txtCheck"/><input type="text" class="txtCheck" /><input type="text" class="txtCheck" />
     <input type="text" class="txtCheck" /> <input type="text" class="txtCheck" /> 
-    <button> Check </button>
+    <button> ChecKinh </button>
+    <span id="Check_Kinh"
+  style="
+  font-size: 12px;
+  color:darkgreen
+  "
+> Ai KINH, bảo nó đọc 5 số hàng KINH, nhập vào các ô bên để check
+</span>
 </div>
     <div style="clear:both"></div>
 <div id="number_current">0</div>
+<div id="call_girl"
+  style="position: fixed;
+  left: 7px;
+  font-size: 12px;
+  line-height: 18px;
+  top: 140px;
+  width: 90px;
+  color: red;"
+>Nếu bạn là người kêu số, bấm <span style="font-weight: bold; font-size: 16px;">ENTER</span> để bốc số</div>
+<div id="warning"
+  style="position: fixed;
+  left: 7px;
+  font-size: 12px;
+  line-height: 18px;
+  bottom: 10px;
+  width: 120px;
+  color: red;"
+>!!!Thông minh là <span style="font-weight: bold; font-size: 16px;">KHÔNG tắt/reload </span>trang khi đang chơi!!!</div>
 <div id="number_recent"></div>
 <div class="loto">
 	<table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="900" border="1" cellspacing="1">
