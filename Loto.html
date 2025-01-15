@@ -6,8 +6,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
 	body{font-family:Arial, Helvetica, sans-serif}
-	table{border:solid 2px #444; border-radius: 5px}
-	.loto{margin:5px 10px}
+  .nut_xanh{
+    background-color: blue;
+    width: 50px;
+    height: 75px;
+    display: none;
+    position: fixed;
+    top: 17px;
+    right: 37px;
+    border-radius: 7px;
+    color: white;
+  }
+  .bs_MO{display: none;}
+  .bs_PC{display: block;}
+	table{border:solid 2px #444; border-radius: 5px;text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif}
+	.loto{margin:5px 15px}
 	.wrapper{width:1100px; margin:auto}
   @-webkit-keyframes blink{
 		0% {background:#CC0033}
@@ -20,9 +33,9 @@
 		100% {background:#CC0033}
 	}
 	.blink{-webkit-animation:blink 0.5s infinite; animation:blink 0.5s infinite; -moz-animation:blink 0.5s infinite; color: white;}
-	.color{background:#C03 !important; color:#fff}
+	.color{background:#C03; color:#fff;padding: 18px 2px;}
   td{min-width:50px; border-radius: 3px; border: solid 1px #777;}
-  .td_bg{background: white;}
+  .td_bg{background: white;padding: 18px 2px;}
 	.delete_table{background: #939393;color: #fff;font-size: 25px;font-weight: bold;text-align: center;border-radius: 3px;cursor: pointer;}
   #number_current {position: fixed;left: 0;font-size: 135px; top:0}
   #number_recent{position:fixed;right:50px;font-size:20px;width:50px; height: 100%;overflow:auto;}
@@ -36,6 +49,75 @@
   /* Firefox */
   input[type=number] {-moz-appearance: textfield;}
   .container{display: flex; justify-content: center; width: 100%;}
+  .Check_Kinh{
+      float: right;
+      margin-top: 10px;
+    }
+    .call_girl{
+      position: fixed;
+  left: 7px;
+  font-size: 12px;
+  line-height: 18px;
+  top: 140px;
+  width: 90px;
+  color: red;
+    }
+    .warning{
+      position: fixed;
+  left: 7px;
+  font-size: 12px;
+  line-height: 18px;
+  bottom: 10px;
+  width: 120px;
+  color: red;
+    }
+  /*****************************************************************/
+
+  @media only screen and (max-width: 480px) {
+    .wrapper{width:410px; margin:auto;}
+    #check_box{ margin: 10px auto;overflow: hidden; width: 100%;}
+    #check_box input { float: left; height:30px; font-size:30px; color:#f00; width:87px; margin: 5px;}
+    #check_box button{ width:100px; height:30px; margin:8px 5px;}
+    .txtCheck{ margin-left:10px;}
+    .Check_Kinh{
+      float: none;
+    }
+    #number_current {position: static;
+        font-size: 85px;
+        text-align: center;}
+    #number_recent{        position: fixed;
+        right: 0;
+        top: 0;
+        font-size: 11px;
+        width: 20px;
+        height: auto;
+        background: yellow;
+        text-align: center;}
+    .loto{margin:5px 5px;width: 100%;}
+    .container{display: flex; justify-content: center; width: 100%;}
+    td{min-width:33px; border-radius: 3px; border: solid 1px #777;}
+    table{border:solid 2px #444; border-radius: 5px;text-align:center; font-size:28px; font-family:Arial, Helvetica, sans-serif}
+    .call_girl{
+      position: static;
+    font-size: 12px;
+    line-height: 18px;
+    color: red;
+    text-align: center;
+    width: auto;
+    }
+    .warning{
+      position: static;
+  font-size: 12px;
+  line-height: 18px;
+  width: auto;
+  color: red;
+  text-align: center;
+    }
+    .bs_MO{display: block;}
+    .bs_PC{display: none;}
+    .nut_xanh{display: block;}
+  }
+
 </style>
 <script>
     var array_doc = [];
@@ -144,6 +226,7 @@
 	    if (number == 1) {
 	        random_table(number);
           $(".to-2").hide();
+          $("td").addClass("td_bg");
 	    }
 	    else {
 	        random_table(number);
@@ -161,11 +244,11 @@
 		////////////////////click//////////////////
 		$("td").click(function(){
 			if($(this).html().trim()!=""){
-				$(this).toggleClass("color");
+				$(this).toggleClass("color").toggleClass("td_bg");
 				var tong_selected = $(this).parent().find($(".color")).length;	
 				if(tong_selected==5){
 					$(this).parent().find(".color").addClass("blink");
-          $(this).parent().find(".blink").removeClass("color");
+          $(this).parent().find(".blink").removeClass("color").addClass("color");
 				}else{
 					$(this).parent().find("td").removeClass("blink");	
 				}
@@ -182,10 +265,20 @@
 		        if (ind > -1) {
 		            array_doc.splice(ind, 1);
 		            $("#number_current").html(x);
-                $("#call_girl").hide();
+                $(".call_girl").hide();
 		            $("#number_recent").append(x + " <br/> ");
 		        }
 		    }
+		});
+    $(".nut_xanh").click(function () {
+        x = array_doc[Math.floor(Math.random() * array_doc.length)];
+        var ind = array_doc.indexOf(x);
+        if (ind > -1) {
+            array_doc.splice(ind, 1);
+            $("#number_current").html(x);
+            $(".call_girl").hide();
+            $("#number_recent").append(x + " <br/> ");
+        }
 		});
 		$("button").click(function () {
 		    var hasvalue = 0;
@@ -216,38 +309,26 @@
     <input type="number" class="txtCheck" />
     <input type="number" class="txtCheck" /> 
     <button> ChecKinh </button>
-    <span id="Check_Kinh"
+    <div class="Check_Kinh"
   style="
   font-size: 12px;
   color:darkgreen
   "
 > Ai KINH, bảo nó đọc 5 số hàng KINH, nhập vào các ô bên để check
-</span>
 </div>
-    <div style="clear:both"></div>
+</div>
 <div id="number_current">0</div>
-<div id="call_girl"
-  style="position: fixed;
-  left: 7px;
-  font-size: 12px;
-  line-height: 18px;
-  top: 140px;
-  width: 90px;
-  color: red;"
->Nếu bạn là người kêu số, bấm <span style="font-weight: bold; font-size: 16px;">ENTER</span> để bốc số</div>
-<div id="warning"
-  style="position: fixed;
-  left: 7px;
-  font-size: 12px;
-  line-height: 18px;
-  bottom: 10px;
-  width: 120px;
-  color: red;"
+<div class="call_girl"
+>
+<span class="bs_PC">Nếu bạn là người kêu số, bấm <span style="font-weight: bold; font-size: 16px;">ENTER</span> để bốc số</span>
+<span class="bs_MO">Nếu bạn là người kêu số, bấm <span style="font-weight: bold; font-size: 16px;">NÚT XANH</span> để bốc số</span></div>
+<div class="warning"
 >!!!Thông minh là <span style="font-weight: bold; font-size: 16px;">KHÔNG tắt/reload </span>trang khi đang chơi!!!</div>
 <div id="number_recent"></div>
+<div class="nut_xanh">Nút</div>
 <div class="container">
   <div class="loto to-1">
-    <table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="870" border="1" cellspacing="1">
+    <table width="100%" border="1" cellspacing="1">
     <tr>
       <td></td>
       <td></td>
@@ -350,7 +431,7 @@
   </table>
   </div>
   <div class="loto to-2">
-    <table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="870" border="1" cellspacing="1">
+    <table width="100%" border="1" cellspacing="1">
     <tr>
       <td></td>
       <td></td>
