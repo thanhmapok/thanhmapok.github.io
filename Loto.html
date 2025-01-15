@@ -6,24 +6,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <style>
 	body{font-family:Arial, Helvetica, sans-serif}
-	td{min-width:50px; border-radius: 3px; border: solid 1px #777;}
 	table{border:solid 2px #444; border-radius: 5px}
-	.loto{float:left; margin-right:45px}
+	.loto{margin:5px 10px}
 	.wrapper{width:1100px; margin:auto}
-	.color{background:#C03 !important; color:#fff}
-	.delete_table{background: #939393;color: #fff;font-size: 25px;font-weight: bold;text-align: center;border-radius: 3px;cursor: pointer;}
-    #number_current {position: fixed;left: 0;font-size: 135px; top:0}
-    #number_recent{position:fixed;right:50px;font-size:20px;width:50px; height: 100%;overflow:auto;}
-    #check_box{ margin: 10px auto;overflow: hidden;}
-    #check_box input { float: left; height:30px; font-size:30px; color:#f00; width:100px;}
-    #check_box button{ width:100px; height:30px; margin-left:15px;}
-    .txtCheck{ margin-left:10px;}
-    /* Chrome, Safari, Edge, Opera */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
-    /* Firefox */
-    input[type=number] {-moz-appearance: textfield;}
-	@-webkit-keyframes blink{
+  @-webkit-keyframes blink{
 		0% {background:#CC0033}
 		50% {background:blue}
 		100% {background:#CC0033}
@@ -33,7 +19,23 @@
 		50% {background:blue}
 		100% {background:#CC0033}
 	}
-	.blink{-webkit-animation:blink 0.5s infinite; animation:blink 0.5s infinite; -moz-animation:blink 0.5s infinite}
+	.blink{-webkit-animation:blink 0.5s infinite; animation:blink 0.5s infinite; -moz-animation:blink 0.5s infinite; color: white;}
+	.color{background:#C03 !important; color:#fff}
+  td{min-width:50px; border-radius: 3px; border: solid 1px #777;}
+  .td_bg{background: white;}
+	.delete_table{background: #939393;color: #fff;font-size: 25px;font-weight: bold;text-align: center;border-radius: 3px;cursor: pointer;}
+  #number_current {position: fixed;left: 0;font-size: 135px; top:0}
+  #number_recent{position:fixed;right:50px;font-size:20px;width:50px; height: 100%;overflow:auto;}
+  #check_box{ margin: 10px auto;overflow: hidden;}
+  #check_box input { float: left; height:30px; font-size:30px; color:#f00; width:100px;}
+  #check_box button{ width:100px; height:30px; margin-left:15px;}
+  .txtCheck{ margin-left:10px;}
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+  /* Firefox */
+  input[type=number] {-moz-appearance: textfield;}
+  .container{display: flex; justify-content: center; width: 100%;}
 </style>
 <script>
     var array_doc = [];
@@ -141,12 +143,13 @@
 	    }
 	    if (number == 1) {
 	        random_table(number);
+          $(".to-2").hide();
 	    }
 	    else {
 	        random_table(number);
 	        while (count_number < 90) {
 	            $("td").html('');
-	            $("td").css("background", "#fff");
+	            $("td").addClass("td_bg");
 	            random_table(number);
 	        }
 	    }
@@ -162,6 +165,7 @@
 				var tong_selected = $(this).parent().find($(".color")).length;	
 				if(tong_selected==5){
 					$(this).parent().find(".color").addClass("blink");
+          $(this).parent().find(".blink").removeClass("color");
 				}else{
 					$(this).parent().find("td").removeClass("blink");	
 				}
@@ -241,213 +245,214 @@
   color: red;"
 >!!!Thông minh là <span style="font-weight: bold; font-size: 16px;">KHÔNG tắt/reload </span>trang khi đang chơi!!!</div>
 <div id="number_recent"></div>
-<div class="loto">
-	<table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="900" border="1" cellspacing="1">
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+<div class="container">
+  <div class="loto to-1">
+    <table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="870" border="1" cellspacing="1">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div>
+  <div class="loto to-2">
+    <table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="870" border="1" cellspacing="1">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  </div>
 </div>
-<div class="loto">
-	<table style="text-align:center; font-size:40px; font-family:Arial, Helvetica, sans-serif" width="450" height="900" border="1" cellspacing="1">
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-</div>
-
 </div>
 </body>
 </html>
