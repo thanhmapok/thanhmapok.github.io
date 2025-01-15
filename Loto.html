@@ -17,7 +17,12 @@
     #check_box{ margin: 10px auto;overflow: hidden;}
     #check_box input { float: left; height:30px; font-size:30px; color:#f00; width:100px;}
     #check_box button{ width:100px; height:30px; margin-left:15px;}
-    .txtCheck{ margin-left:10px}
+    .txtCheck{ margin-left:10px;}
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+    /* Firefox */
+    input[type=number] {-moz-appearance: textfield;}
 	@-webkit-keyframes blink{
 		0% {background:#CC0033}
 		50% {background:blue}
@@ -183,7 +188,7 @@
 		    $(".txtCheck").each(function () {
 		         giatri = this.value;
 		         var ind = array_doc.indexOf(parseInt(giatri));
-		        if (ind > -1 || giatri == "") {
+		        if (ind > -1 || giatri == "" || giatri > 90) {
 		            hasvalue++;
 		        }
 		    });
@@ -201,8 +206,11 @@
 <div class="false"></div>
 <div class="wrapper">
 <div id="check_box">
-    <input type="text" class="txtCheck"/><input type="text" class="txtCheck" /><input type="text" class="txtCheck" />
-    <input type="text" class="txtCheck" /> <input type="text" class="txtCheck" /> 
+    <input type="number" class="txtCheck"/>
+    <input type="number" class="txtCheck" />
+    <input type="number" class="txtCheck" />
+    <input type="number" class="txtCheck" />
+    <input type="number" class="txtCheck" /> 
     <button> ChecKinh </button>
     <span id="Check_Kinh"
   style="
